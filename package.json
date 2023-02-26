@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode=development",
-    "dev": "nodemon -e html,css,js --exec npm run build"
+    "dev": "nodemon --watch src -e html,css,js --exec npm run build"
   },
   "keywords": [],
   "author": "Ignacio Rios Lahore (Pistak)",
