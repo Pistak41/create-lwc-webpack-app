@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const pluginLWC = require("lwc-webpack-plugin");
 
 module.exports = {
@@ -5,6 +6,9 @@ module.exports = {
     path: require("path").resolve(__dirname, "build"),
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      title: 'LWC Webpack App'
+    }),
     new pluginLWC(),
     {
       apply(compiler) {
@@ -22,4 +26,7 @@ module.exports = {
       },
     },
   ],
+  devServer:{
+    open: true
+  }
 };
